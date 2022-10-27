@@ -1,6 +1,87 @@
+* {
+  font-size: 15px;
+
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 3%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.card-img-top {
+  padding: 16px;
+  width: 50px;
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: hsl(213, 20%, 18%);
+}
+.card {
+  border-radius: 2rem;
+  height: 50%;
+  width: 30%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: hsl(213, 19%, 10%);
+}
+h2 {
+  margin-top: 20px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+}
+p {
+  color: white;
+  text-align: left;
+  color: hsl(216, 12%, 54%);
+  font-weight: 700;
+}
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background-color: hsl(213, 20%, 18%);
+  color: hsl(217, 12%, 63%);
+}
+.btn:focus {
+  background-color: hsl(25, 97%, 53%);
+}
+#submitBtn {
+  height: 50px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  border-radius: 1.8rem;
+  letter-spacing: 1px;
+  width: 100%;
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+}
+#submitBtn:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: white;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

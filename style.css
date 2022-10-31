@@ -17,7 +17,6 @@ body {
   padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 .container {
-  display: none;
   max-width: 850px;
   width: 25%;
   height: 58vh;
@@ -89,11 +88,21 @@ p {
   cursor: url(./images/cursor1.png), pointer;
 }
 
-.btn:focus {
+.active {
   background-color: hsl(216, 12%, 54%);
   color: white;
 }
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #submitBtn {
+  height: 2.2rem;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 1.8rem;
   letter-spacing: 1px;
   width: 100%;
@@ -163,4 +172,7 @@ p {
   color: hsl(216, 12%, 54%);
   font-weight: 700;
   line-height: 20px;
+}
+.hidden {
+  display: none;
 }

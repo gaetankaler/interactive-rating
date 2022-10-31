@@ -1,50 +1,72 @@
-* {
-  font-size: 15px;
-
+*,
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "Overpass", sans-serif;
-  background-color: hsl(216, 12%, 3%);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 120px;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: hsl(216, 12%, 3%);
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+.container {
+  display: none;
+  max-width: 850px;
+  width: 25%;
+  height: 58vh;
+  background-color: hsl(213, 19%, 10%);
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+@media (max-width: 1440px) {
+  .container {
+    height: 43vh;
+    width: 28%;
+  }
+}
+@media (max-width: 376px) {
+  .container {
+    width: 90%;
+    height: 65vh;
+  }
+  .btn {
+    width: 2.6rem !important;
+    height: 2.6rem !important;
+  }
+  #submitBtn {
+    width: 100% !important;
+  }
 }
 .card-img-top {
   padding: 16px;
   width: 50px;
-  margin-top: 80px;
-  margin-left: 20px;
+  margin-top: 10px;
   border-radius: 50%;
   background-color: hsl(213, 20%, 18%);
 }
-.card {
-  border-radius: 2rem;
-  height: 50%;
-  width: 30%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: hsl(213, 19%, 10%);
-}
 h2 {
-  margin-top: 20px;
+  margin-top: 25px;
   font-weight: 700;
   color: white;
   text-align: left;
+  font-weight: 700;
 }
 p {
-  color: white;
   text-align: left;
+  margin-top: 20px;
   color: hsl(216, 12%, 54%);
   font-weight: 700;
+  line-height: 20px;
 }
-.button {
+.button-groupe {
   display: flex;
   justify-content: space-around;
 }
@@ -52,27 +74,32 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1rem;
-  height: 3.5rem;
+  margin-top: 25px;
   width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   background-color: hsl(213, 20%, 18%);
   color: hsl(217, 12%, 63%);
+  text-decoration: none;
+  font-weight: 700;
 }
-.btn:focus {
+.btn:hover {
   background-color: hsl(25, 97%, 53%);
+  color: white;
+  cursor: url(./images/cursor1.png), pointer;
+}
+
+.btn:focus {
+  background-color: hsl(216, 12%, 54%);
+  color: white;
 }
 #submitBtn {
-  height: 50px;
-  font-weight: 400;
-  margin-bottom: 70px;
   border-radius: 1.8rem;
   letter-spacing: 1px;
   width: 100%;
   color: white;
   background-color: hsl(25, 97%, 53%);
+  text-decoration: none;
 }
 #submitBtn:hover {
   color: hsl(25, 97%, 53%);
@@ -85,4 +112,55 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.container-hidden {
+  max-width: 850px;
+  width: 25%;
+  height: 54vh;
+  background-color: hsl(213, 19%, 10%);
+  padding: 14px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+@media (max-width: 1440px) {
+  .container-hidden {
+    height: 43vh;
+    width: 28%;
+  }
+}
+@media (max-width: 376px) {
+  .container-hidden {
+    width: 90%;
+    height: 65vh;
+  }
+}
+.image-hidden {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card-img-top-hidden {
+  width: 140px;
+}
+.card-title-hidden {
+  margin-top: 40px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+.card-text-top-hidden {
+  text-align: center;
+  margin-top: 40px;
+  background-color: hsl(213, 20%, 18%);
+  border-radius: 30px;
+  padding: 8px 13px 8px 13px;
+  color: hsl(25, 97%, 53%);
+}
+.card-text-bot-hidden {
+  text-align: center;
+  margin-top: 20px;
+  color: hsl(216, 12%, 54%);
+  font-weight: 700;
+  line-height: 20px;
 }
